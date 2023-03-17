@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Public IP Address</title>
+</head>
+<body>
+    <div id="ip-address"></div>
+    
+    <script>
+        fetch('/').then(response => response.text()).then(data => {
+            document.getElementById('ip-address').innerHTML = `<h1>Your public IP address is: ${data}</h1>`;
+        });
+    </script>
+</body>
+</html>
